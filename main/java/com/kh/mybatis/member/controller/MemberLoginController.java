@@ -36,6 +36,8 @@ public class MemberLoginController extends HttpServlet {
 		m.setUserId(request.getParameter("userId"));
 		m.setUserPwd(request.getParameter("userPwd"));
 		
+		String path = request.getParameter("path");
+		
 		MemberService memberService = new MemberServiceImpl(); 
 		Member loginUser = memberService.loginMember(m);
 		
